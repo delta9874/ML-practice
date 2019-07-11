@@ -1,0 +1,505 @@
+numpy module
+pandas module
+visualization using matplotlib and seaborn
+hello world of ml (Dev a perceptron)
+kaggle,github, machine hack site for compettiv ml prog
+scikit learn algo are available
+regression -data set is nt fixed
+classification-predicting on fixed set of data,discrete set f data for prediction
+   - logistic Regression
+   - Decision Tree
+   - Naive Bayes
+   - knn(k nearest neighbour)
+   - metrics (regression and classification)
+
+cluster
+
+
+
+
+project work
+
+day 1
+REPL(repeat execute print loop)
+-compiled prog run faster,pyton is interpreted
+-interpreted -interactive -object oriented prog
+type(x)-gives the data type of the variable
+
+we take log aor expo or scaling for managing the data set
+1/(1+math.exp(x)) sigmoid fuction gives value between 0-1,may b used for calculating probability
+soft math,
+for library with big names we can simply write
+import math as m
+now we can use m everytime now
+if any function in the library is too big we can define it as
+from math import sqrt as s
+now we can use s as sqrt
+
+day 2
+list==[]  replace array ,list doesnt have fixed size
+set=={}
+tuple==()
+dictionary=={}==like hashmap in java
+numpy have array
+pandas have series and datagram
+marks=[[1,2],[7,3]] 2 d array
+access elements of 2d list
+
+marks[1][2] it will print 3
+
+len(list name) gives the size of list
+list have negative index too, its follows reverse order
+ex marks=[1,2,3,4,5,6,7,8,9]
+   marks[-1] will print 9
+
+slicing marks[1:5] will print 2,3,4,5
+        marks[start:end+1]  
+        marks[start:] will print till last
+        marks[:] print whole array
+del listname(index) will delete the element of that index
+
+marks=list() or marks=[] defines blank list
+ marks=list(range(-20,21)) range is the generator here list function 
+ comprehension
+ sqrtmarks=[math.sqrt(x) for x in range(start,end)]
+ import math
+marks=list(range(-21,22))
+sigmoid=[1/(1+math.exp(-x))  for x in marks]
+print(sigmoid)
+
+list 1= elements...
+list2=......
+str="score of {} is {}"
+fial=str.format(list1[0],list2[0]) complets the template string
+
+
+ex 
+for i in range(len(names)):
+   print(str.format(names[i],score[i]))
+
+
+
+   or
+   print("score of {} is {}.format(list1[0],list2[0])
+
+Tuple
+  t1=()
+  t1=(12,213,113)
+  t1=tuple()
+  tuple is read only list
+  t1[0]=40 ==> will not work
+  l1=list(t1)==> converting a tuple to a list
+  t2=tuple(l1)=== convert a list to tuple
+  
+
+  day3
+  dictionary  2d array key value pair,values are return with key
+  if key is repeated then the last entry will be saved  
+  d1={"key1":"value1","key2":"value2"}
+ get funtion 
+  d1.get(1)  
+  d1[1]
+ 
+
+ set 
+ s1={}
+ s1=set()
+ s1={324,53646,57876,453,2342,23424,3564,46}
+ s2={123,343,44,34,344,44,4}
+ s3=s1.union(s2)
+ s4=s1.intersection(s2)
+ zip function
+ roll=[1,2,3,4,5]
+ name=[a,b,c,d,e]
+
+ students=list(zip(roll,names))
+zip is generator it doesnt creat a list
+
+for e in zip(roll,names):
+    print e
+
+ enumerate (roll)  work on list
+ it will return (0,12) basically add sr no
+                 (1,12)
+function
+
+
+def funnctionname(parameter):
+    '''description 
+    '''
+def circle(radius):
+    
+    def area(): 
+        return 3.14*radius**2
+    def circum():
+        return 2*3.14*radius
+    def diameter():
+        return radius*2
+    return(area,circum,diameter)
+    
+radius=8
+
+ar,pr,di=circle(radius)
+print(ar(),pr(),di())
+
+day4
+string ,list
+s="amit,sumit,prason"
+l=s.split(":")   #breaks the string in list
+print(l)
+ class and object
+  no concept of visibility
+  method must have one parameter,by convention we write self it is similar to this in c++
+
+ 
+  class student:
+    def setdata(self,r,n,m):#we need to pass just 3 parameter self is handeled by python complier
+        self.roll=r
+        self.name=n
+        self.marks=m
+    def prd(self):
+        print("roll",self.roll)
+        print("name",self.name)
+s=student()
+s.setdata(32,"delta",99)        
+s.prd()
+
+def __init__(self,r,n,m):#__ is used for system specific function,its the constructoor of the class
+        self.roll=r
+        self.name=n
+        self.marks=m
+
+ there are two ways to return from to function
+ 1: yeild
+ 2: return
+ yeild s executed via next() ,it act as generator function ,execution happen part by part the no of time next is called
+ the next yeild the next value ,until yeild is defined next can be called t iterate
+
+import re #regular expression package
+#re.sub()
+#re.find()
+regstr=["a-zA-Z0-9"]
+s="cats are good,cats are ugly.bats are flying"
+#s="cat cat cat rat rat"
+#regexpr="cat"
+regexpr="[^cr]at"#finds both cat or rat
+obj=re.search(regexpr,s)
+#obj=re.find(regexpr,s)
+#print(type(obj))
+if obj is not None:
+    print("found")
+    p';l
+
+2,4,4,6,7,8, ,100000 
+
+pandas ===panel data
+
+
+
+
+######################################################
+
+
+
+DAY 6
+
+#############################################################
+
+for i in autodf.modelyear.unique():
+    print("modelyear:",i,autodf[autodf.modelyear==i]["cylinders"].value_counts())
+
+##############################################################################################################################
+ml
+
+1-Formula
+2-tree
+3-probability
+sgd classifier ,random forest ,neive bayes ,percepton etc
+
+artifical general intelligence
+
+
+ml
+1-supervised-feed many examples on wich machine learns and predict
+2-unsupervised
+3-reinforcement 
+4-ensamble -random forest
+unsupervised -predict som grouping in the giving data,data doest have any label,(clustring works on unsupervised)
+
+
+
+the learning process
+-data gathering process
+-data processing
+-diensionality Reduction-(topic modeling-Probablititc topic modeling,)
+-model learning-(classification,Regression,Clustering,Description)
+-model testing                                                                                                                                                                                                                                                                                        
+Training data ===>feed to model and testing data===>model=====>predict
+
+perceptron  ====>(single layer perceptron (slp))                                                     google-ai winter
+perseptron is a linear seperator 
+multilayer perseptron is nueral network
+--Epochs
+--Learning rate
+--weights
+--weight update
+--loss function
+--gradient(partial derivative)
+
+loss function
+
+#machine hack,machine veda
+
+
+
+
+
+
+
+Classfication:
+a>logistic Regession
+b>Decision Tress
+C>naive Bayes
+D>KNN  --- non parametric learning,lazy learner doesnt create model
+e>random Forest
+F>SVM
+g>Gaussion kernal
+H>Perceptron
+i>Neural Network
+h>SGD classifier
+
+
+
+
+
+
+confusion mat
+     0    1
+ 0  TN     FP
+
+ 1  FN     TP
+
+      TP         
+   ---------    ===>pression
+    FP+ TP
+
+
+
+     TP
+ ----------     ======>recall/sensitivity (TPR)
+   FN +TP    
+
+
+
+a==>decide what metric is important ?
+b==>drop bad records so that total no of dropped record < 70 -100
+c==>take all columns and fit model and check train metrics and test metrics overfit or under fit
+d==>do some feature engg(reduction here)..apply select Kbest or select from model to find feature ,build model and check metrics
+e==> think about converting some continous feature into categorical feature and create model 
+
+
+
+decision tree  (regression as well as classification)
+
+  cart tree -classification regression tree
+  ID3 tree-
+  entropy -coming from information gain theory ,more the entropy more is the uncertain is the infomation
+  parameter and hyper parameter                              
+
+
+
+
+
+
+
+1>what u need to achive?(recall,precission,....) why?(In domain terms)
+2>inspect entire dataset
+    a> which is dependent (y)/independent(X)
+    b>total records/total columns
+    c> must have indepth knowledge  what values are there(any abnormal values,values which are not matching with meaning of columns)
+    d> for categorical column must be clear about frequencies
+    e> for continous  columns must clear about wheather there are outliers .if the outliers what are the corresponding values
+    number statistics
+    f>any np.NAN are there,if there what to do with them
+    3>iT is possible that ,u may not known meaning of some columns .In that case find out weather they are inuncing your dependent variable
+
+
+
+
+
+
+
+knn,decission tree,-- response encoding
+logistic, sgd ---one hot
+
+
+
+
+
+
+
+
+There is a Getting Started Category in the Kaggle competition page.
+
+Classification Problem: https://www.kaggle.com/c/titanic
+
+Regression Problem: https://www.kaggle.com/c/house-prices-advanced-regression-techniques
+
+Computer Vision: https://www.kaggle.com/c/digit-recognizer
+
+Image Processing: https://www.kaggle.com/c/facial-keypoints-detection
+
+Natural Language Processing: https://www.kaggle.com/c/word2vec-nlp-tutorial
+
+
+Data set
+https://www.kaggle.com/tmdb/tmdb-movie-metadata
+
+
+https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
+
+https://www.kaggle.com/c/porto-seguro-safe-driver-prediction
+https://www.kaggle.com/c/amazon-employee-access-challenge
+
+
+
+
+
+
+Greetings from firstnaukri.com!!!
+
+ Firstnaukri.com is a group portal of Naukri.com and is exclusively focused on enabling companies to hire from campuses. We facilitate companies to connect with campuses through our campus hiring platform, which is designed to ensure privacy of student details and is operated through a TPO invite mechanism. Companies can connect with students only if the TPO accepts there invite and further student details are visible to company only if a student applies to the job.
+Since campus hiring is highly dependent on approaching the companies at the right time, we are trying to complete the 2020 batch registrations as soon as possible. This will allow us enough time to connect with more companies and deliver meaningful invites to your campus.Kindly ask the pre-final year students i.e 2020 passing out batch to register on the below dedicated campus registration link
+
+ 
+
+https://www.firstnaukri.com/campusreg/ncccyrx
+
+This link is for engineering students of Kalyani Government Engineering College only. Student details will be visible in your gec_kalyani_campus login immediately)
+
+Complete their registration process, Firstnaukri conducts recruitment drive in our college, so go throung their website and get yourself registerd on their portal.
+
+Thank You
+Training and Placement Cell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
